@@ -11,7 +11,7 @@ import { BlogComponent } from './blog/blog.component';
 import { TipComponent } from './tip/tip.component';
 import { ContactComponent } from './contact/contact.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'github', component: GithubComponent },
   { path: 'linkedin', component: LinkedinComponent },

@@ -8,7 +8,7 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'your-app-name';
+  title = 'personalwebsite2023';
   showHomeOptions = true;
 
 
