@@ -1,0 +1,101 @@
+.home-options-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.home-options-item {
+  flex-basis: calc(25% - 10px);
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  height: 100px;
+  /* Other styles for each grid item */
+}
+
+.home-options-container{
+  display: flex;
+  height: calc(100% - 66px);
+  position: relative;
+}
+
+.home-options{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.home-options-row{
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+/*.home-options-item{*/
+/*  flex: 1;*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  flex-direction: column;*/
+/*}*/
+
+.home-options-icon{
+  max-height: 80px;
+  max-width: 120px;
+  cursor: pointer;
+}
+
+
+
+.home-options-wrapper{
+  cursor: pointer;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  border: 0;
+  padding: 0;
+  background: none;
+  font-size: 100%;
+  font-family: inherit;
+  color: inherit;
+  font: inherit;
+
+
+  appearance: auto;
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+  margin: 0em;
+
+}
+
+.home-options-text{
+  font-family: 'Press Start 2P', monospace;
+  font-weight: normal;
+  font-size: 1em;
+  color: white;
+  cursor: pointer;
+}
+
+.home-button {
+  position: absolute;
+  top: 10vh;
+  left: 10vw;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  z-index: 2;
+  background: none;
+  border: none;
+}
+.home-button>img{
+  width: 100px;
+  height: auto;
+}
