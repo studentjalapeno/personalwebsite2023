@@ -24,7 +24,6 @@
   margin: auto;
   background: #e6e2e2;
   width: 55vw;
-  height: 57vh;
   border: 2px solid black;
   border-radius: 7px;
   min-height: 300px;
@@ -44,7 +43,6 @@
 }
 
 .home-options-container{
-  display: flex;
   height: calc(100% - 66px);
   position: relative;
 }

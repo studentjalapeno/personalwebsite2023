@@ -1,0 +1,44 @@
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  padding: 15px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.submit-button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.loading-message, .error-message, .success-message {
+  margin-top: 15px;
+}
+
+.error-message {
+  color: #FF0000;
+}
+
+.success-message {
+  color: #28a745;
+}

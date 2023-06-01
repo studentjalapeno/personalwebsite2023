@@ -19,4 +19,9 @@ export class AppComponent {
         this.showHomeOptions = event.url === '/' || event.url === '';
       });
   }
+
+  navigateHome() {
+    this.router.navigate(['/']); // navigate to root
+  }
+
 }

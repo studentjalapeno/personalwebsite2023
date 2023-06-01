@@ -5,7 +5,8 @@
     <div class="home-content">
       <div class="home-container">
         <header class="home-navbar">
-          <img src="assets/Deven-Meza-Logo.png" alt="Home button Deven Meza logo" class="logo">
+          <img src="assets/Deven-Meza-Logo.png" alt="Home button Deven Meza logo" class="logo" (click)="navigateHome()">
+
         </header>
         <div class="home-options-container">
           <app-home-options *ngIf="showHomeOptions"></app-home-options>

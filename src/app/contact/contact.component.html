@@ -1,1 +1,19 @@
-<p>contact works!</p>
+<form [formGroup]="contactForm" (ngSubmit)="submitForm()" class="contact-form">
+  <div class="form-group">
+    <input type="text" formControlName="name" placeholder="Your name" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <input type="email" formControlName="email" placeholder="Your email" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <textarea formControlName="message" placeholder="Your message" class="form-control"></textarea>
+  </div>
+
+  <button type="submit" [disabled]="contactForm.invalid || isLoading" class="submit-button">Submit</button>
+</form>
+
+<div *ngIf="isLoading" class="loading-message">Submitting form...</div>
+<div *ngIf="isError" class="error-message">An error occurred: {{ errorMessage }}</div>
+<div *ngIf="isSuccess" class="success-message">Form submitted successfully!</div>
