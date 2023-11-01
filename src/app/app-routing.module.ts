@@ -13,13 +13,13 @@ import { ContactComponent } from './contact/contact.component';
 
 export const routes: Routes = [
   { path: 'about', component: AboutComponent },
-  { path: 'github', component: GithubComponent },
+  { path: 'services', component: GithubComponent },
   { path: 'linkedin', component: LinkedinComponent },
-  { path: 'projects', component: ProjectsComponent },
+  { path: 'projects', component: ProjectsComponent , data: {view: 'projects'}  },
   { path: 'resume', component: ResumeComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'tip', component: TipComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: 'contact', component: ContactComponent, data: {view: 'contact'} },
 ];
 
 @NgModule({

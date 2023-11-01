@@ -3,6 +3,26 @@
   margin: 0;
   overflow: hidden;
 }
+.lottie-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+  background: rgba(0,0,0,0.85);
+  opacity: 1;
+  transition: opacity 1s; // This is for fading out
+
+  dotlottie-player {
+    max-width: 90vw; // Ensure it doesn't go beyond viewport on mobile
+    max-height: 90vh;
+  }
+}
+
 
 .tube-border{
   width: 100%;
@@ -10,13 +30,17 @@
   background-image: url(assets/border-stretched-2.png);
   background-size: 100% 100%;
   position: absolute;
-  z-index: 10;
+  z-index: 40;
   top: 0;
   left: 0;
   pointer-events: none;
-
 }
 
+@media (max-width: 480px) {
+  .tube-border {
+    background-image: none;
+  }
+}
 .tube-shape{
   background: black;
   color: white;
@@ -399,6 +423,7 @@
 }
 
 .stars{
+  z-index: 31;
   box-shadow: 250px 987px #fff, 243px 1924px #fff, 1803px 893px #fff, 1749px 204px #fff, 1251px 130px #fff, 977px 1215px #fff, 1709px 1529px #fff, 1523px 1529px #fff, 1993px 905px #fff, 634px 602px #fff, 1601px 1842px #fff, 1154px 424px #fff, 913px 1326px #fff, 804px 1149px #fff, 1785px 1960px #fff, 466px 498px #fff, 4px 1505px #fff, 734px 1173px #fff, 471px 1786px #fff, 1093px 942px #fff, 972px 1295px #fff, 755px 473px #fff, 1094px 618px #fff, 1040px 655px #fff, 342px 820px #fff, 656px 213px #fff, 1328px 1209px #fff, 1842px 1374px #fff, 986px 371px #fff, 1434px 72px #fff, 74px 1949px #fff, 1599px 5px #fff, 105px 1746px #fff, 1199px 834px #fff, 1734px 1199px #fff, 946px 116px #fff, 1746px 1430px #fff, 359px 539px #fff, 1194px 1491px #fff, 239px 1103px #fff, 1468px 1379px #fff, 107px 772px #fff, 105px 1716px #fff, 1772px 1572px #fff, 491px 1551px #fff, 1436px 1px #fff, 806px 74px #fff, 271px 393px #fff, 972px 382px #fff, 2px 64px #fff, 964px 29px #fff, 1259px 1102px #fff, 978px 139px #fff, 1545px 1944px #fff, 1262px 152px #fff, 258px 1800px #fff, 221px 136px #fff, 2px 1900px #fff, 1949px 506px #fff, 648px 1486px #fff, 1866px 1800px #fff, 530px 1205px #fff, 533px 593px #fff, 1288px 845px #fff, 93px 1182px #fff, 1042px 1781px #fff, 97px 275px #fff, 811px 1494px #fff, 958px 1784px #fff, 1319px 1991px #fff, 1963px 1712px #fff, 1410px 185px #fff, 118px 230px #fff, 587px 1196px #fff, 410px 459px #fff, 515px 1782px #fff, 1258px 1611px #fff, 1344px 718px #fff, 1323px 1847px #fff, 1438px 644px #fff, 455px 648px #fff, 1938px 1633px #fff, 972px 1781px #fff, 1087px 1307px #fff, 1409px 581px #fff, 790px 1803px #fff, 766px 1296px #fff, 513px 510px #fff, 510px 49px #fff, 1833px 1664px #fff, 1927px 582px #fff, 1562px 1564px #fff, 1459px 1321px #fff, 199px 1547px #fff, 758px 266px #fff, 989px 302px #fff, 1944px 600px #fff, 1884px 340px #fff, 606px 1668px #fff, 1938px 580px #fff;
   position: absolute;
   width: 3px;
@@ -493,3 +518,34 @@ li {
   content: "•";
   color: #ff4444;
 }
+
+/* Styling the scrollbar */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the vertical scrollbar */
+  height: 8px; /* Height of the horizontal scrollbar */
+}
+
+/* Styling the track (background) of the scrollbar */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1); /* A faint white background that's somewhat transparent */
+}
+
+/* Styling the handle (slider) of the scrollbar */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent white so it stands out but isn't too bold */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Styling the handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.7); /* A bit more opaque on hover */
+}
+
+/* For Firefox, starting from version 64 */
+* {
+  scrollbar-width: thin; /* Make it thinner than the default */
+  scrollbar-color: rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.1); /* slider color and track color respectively */
+}
+

@@ -1,18 +1,24 @@
+<div class="lottie-container" #lottieContainer>
+  <dotlottie-player src="https://lottie.host/bc9d4f61-cc89-40de-9142-af85deca24bf/39Z3goQbai.json" background="#000000" speed="2" direction="1" mode="normal" autoplay></dotlottie-player>
+</div>
+
 <div class="tube-border"></div>
 <div class="tube-shape">
   <div class="content">
     <div class="stars"></div>
-    <div class="home-content">
+    <div class="home-content" *ngIf="!isAboutRoute">
       <div class="home-container">
         <header class="home-navbar">
           <img src="assets/Deven-Meza-Logo.png" alt="Home button Deven Meza logo" class="logo" (click)="navigateHome()">
-
         </header>
         <div class="home-options-container">
-          <app-home-options *ngIf="showHomeOptions"></app-home-options>
-          <router-outlet></router-outlet>
+          <app-home-options *ngIf="currentView === HomeView.OPTIONS"></app-home-options>
+          <app-contact *ngIf="currentView === HomeView.CONTACT"></app-contact>
+          <app-projects *ngIf="currentView === HomeView.PROJECTS"></app-projects>
+          <app-resume *ngIf="currentView === HomeView.RESUME"></app-resume>
         </div>
       </div>
     </div>
+    <router-outlet></router-outlet>
   </div>
 </div>

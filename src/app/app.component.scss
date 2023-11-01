@@ -1,0 +1,84 @@
+@import '_variables.scss';
+
+// Define variables
+$primary-bg-color: #e6e2e2;
+$secondary-bg-color: #d4cdcd;
+$border-color: #979797;
+$primary-font: 'Press Start 2P', monospace;
+
+// General styles
+.logo {
+  height: 35px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  animation: turn-on 3.4s linear;
+}
+
+.home-content {
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.home-container {
+  margin: auto;
+  background: $primary-bg-color;
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 7px;
+  min-height: 300px;
+
+
+  // Tablet
+  @media (min-width: 768px) {
+    width: 70vw;
+  }
+
+  // Desktop
+  @media (min-width: 1024px) {
+    width: 55vw;
+  }
+}
+
+.home-navbar {
+  background: $secondary-bg-color;
+  border: 3px solid $border-color;
+  text-align: left;
+  position: relative;
+  top: -4px;
+  border-radius: 4px;
+  padding: 7px 0 7px 5%;
+}
+
+.home-options-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.home-button {
+  position: absolute;
+  top: 10vh;
+  left: 10vw;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 2;
+
+  img {
+    width: 100px;
+    height: auto;
+  }
+}
+
+
+

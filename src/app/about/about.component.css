@@ -1,0 +1,102 @@
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding-top: 175px;  /* Add padding-top for mobile by default */
+}
+
+.about-me-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: none; /* By default, hide the title */
+}
+
+.image-container {
+  margin-bottom: 1.5rem; /* Space between image and content */
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about-me-content {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .about-me-container {
+    padding: 3rem 1rem;
+    margin: 50px 20px 0 75px;
+  }
+
+  .about-me-title {
+    font-size: 2rem;
+  }
+
+  .profile-image {
+    width: 220px;
+    height: 220px;
+  }
+
+  .about-me-content {
+    font-size: 1.2rem;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Tablet View */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .about-me-container {
+    padding: 4rem 2rem;
+    margin: 50px 20px 0 20px;
+  }
+
+  .about-me-title {
+    font-size: 2.3rem;
+  }
+
+  .profile-image {
+    width: 240px;
+    height: 240px;
+  }
+
+  .about-me-content {
+    font-size: 1.3rem;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Desktop View */
+@media (min-width: 1025px) {
+  .about-me-title {
+    display: block;
+  }
+
+  .about-me-container {
+    padding-top: 175px;  /* Reset the padding-top for desktops */
+  }
+}

@@ -1,0 +1,75 @@
+// Styles specific to the home-options component
+@import '/src/app/variables';
+$primary-font: 'Press Start 2P', monospace;
+
+// Your existing styles  c
+
+
+.home-options,
+.home-options-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; // Wrap items if they don't fit in a single row
+
+  // For Mobile & Tablet
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.home-options-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;  // Add space between grid items
+}
+
+.home-options-item {
+  flex-basis: calc(50% - 8px); // 2 items per row by default
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  height: 100px;
+
+  // Tablet layout (2x2 grid)
+  @media (min-width: 768px) {
+    flex-basis: calc(50% - 8px);
+  }
+
+  // Desktop layout (2x4 grid)
+  @media (min-width: 1024px) {
+    flex-basis: calc(25% - 8px);
+  }
+
+  // Mobile layout (items stack on top of each other)
+  @media (max-width: 767px) {
+    flex-basis: calc(25% - 8px);
+
+  }
+}
+
+.home-options-icon {
+  max-height: 80px;
+  max-width: 120px;
+  cursor: pointer;
+}
+
+.home-options-wrapper {
+  cursor: pointer;
+  appearance: none;
+  border: 0;
+  padding: 0;
+  background: none;
+  font-family: inherit;
+  color: inherit;
+  font-size: 100%;
+}
+
+.home-options-text {
+  font-family: $primary-font;
+  font-size: 1em;
+  color: white;
+}
