@@ -6,6 +6,10 @@ $secondary-bg-color: #d4cdcd;
 $border-color: #979797;
 $primary-font: 'Press Start 2P', monospace;
 
+body{
+  margin: 0 !important;
+}
+
 // General styles
 .logo {
   height: 35px;
@@ -30,7 +34,7 @@ $primary-font: 'Press Start 2P', monospace;
   background: $primary-bg-color;
   width: 100%;
   border: 2px solid black;
-  border-radius: 7px;
+  border-radius: 0px;
   min-height: 300px;
 
 
