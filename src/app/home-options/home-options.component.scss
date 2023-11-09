@@ -41,7 +41,7 @@ $primary-font: 'Press Start 2P', monospace;
 
   // Desktop layout (2x4 grid)
   @media (min-width: 1024px) {
-    flex-basis: calc(25% - 8px);
+    flex-basis: calc(50% - 8px);
   }
 
   // Mobile layout (items stack on top of each other)

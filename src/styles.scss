@@ -22,6 +22,10 @@ body{
     max-width: 85vw; // Ensure it doesn't go beyond viewport on mobile
     max-height: 85vh;
   }
+  @media (max-width: 767px) { /* Adjust max-width as needed for your target mobile breakpoint */
+    width: 100vw !important;
+    height: 100vh !important;
+  }
 }
 
 
