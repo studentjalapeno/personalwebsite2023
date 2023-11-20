@@ -1,17 +1,29 @@
-<form [formGroup]="contactForm" (ngSubmit)="submitForm()" class="contact-form">
+<form [formGroup]="contactForm" (ngSubmit)="submitForm()" class="contact-form" novalidate>
   <div class="form-group">
-    <input type="text" formControlName="name" placeholder="Your name" class="form-control">
+    <label for="name">Your name</label>
+    <input type="text" formControlName="name" id="name" placeholder="Enter your name" class="form-control" [ngClass]="{'is-invalid': contactForm.get('name')?.invalid && contactForm.get('name')?.touched}">
+    <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="validation-error">
+      Name is required.
+    </div>
   </div>
 
   <div class="form-group">
-    <input type="email" formControlName="email" placeholder="Your email" class="form-control">
+    <label for="email">Your email</label>
+    <input type="email" formControlName="email" id="email" placeholder="Enter your email" class="form-control" [ngClass]="{'is-invalid': contactForm.get('email')?.invalid && contactForm.get('email')?.touched}">
+    <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="validation-error">
+      A valid email is required.
+    </div>
   </div>
 
   <div class="form-group">
-    <textarea formControlName="message" placeholder="Your message" class="form-control"></textarea>
+    <label for="message">Your message</label>
+    <textarea formControlName="message" id="message" placeholder="Enter your message" class="form-control" [ngClass]="{'is-invalid': contactForm.get('message')?.invalid && contactForm.get('message')?.touched}"></textarea>
+    <div *ngIf="contactForm.get('message')?.errors?.['maxlength'] && contactForm.get('message')?.touched" class="validation-error">
+      Message cannot exceed 500 characters.
+    </div>
   </div>
 
-  <button type="submit" [disabled]="contactForm.invalid || isLoading" class="submit-button">Submit</button>
+  <button type="submit" [disabled]="contactForm!.invalid || isLoading" class="submit-button">Submit</button>
 </form>
 
 <div *ngIf="isLoading" class="loading-message">Submitting form...</div>

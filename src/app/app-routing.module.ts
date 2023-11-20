@@ -13,11 +13,11 @@ import { ContactComponent } from './contact/contact.component';
 
 export const routes: Routes = [
   { path: 'about', component: AboutComponent },
-  { path: 'services', component: GithubComponent },
+  { path: 'services', component: GithubComponent,  data: {view: 'services'}  },
   { path: 'linkedin', component: LinkedinComponent },
   { path: 'projects', component: ProjectsComponent , data: {view: 'projects'}  },
   { path: 'resume', component: ResumeComponent },
-  { path: 'blog', component: BlogComponent },
+  { path: 'blog', component: BlogComponent,  data: {view: 'blog'}  },
   { path: 'tip', component: TipComponent },
   { path: 'contact', component: ContactComponent, data: {view: 'contact'} },
 ];

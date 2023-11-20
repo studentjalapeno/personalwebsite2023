@@ -3,7 +3,9 @@
   margin: auto;
   padding: 15px;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  background-color: #fff; /* Adding a background color for contrast */
 }
+
 
 .form-group {
   margin-bottom: 15px;
@@ -14,16 +16,22 @@
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-control.is-invalid {
+  border-color: #FF0000; /* Highlight invalid fields */
 }
 
 .submit-button {
-  background-color: #007BFF;
+  background-color: #0056b3;
   color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   margin-top: 10px;
+  font-size: 1rem;
 }
 
 .submit-button:disabled {
@@ -33,12 +41,21 @@
 
 .loading-message, .error-message, .success-message {
   margin-top: 15px;
+  font-size: 1.3rem;
 }
 
 .error-message {
   color: #FF0000;
+  font-size: 1.3rem;
 }
 
 .success-message {
   color: #28a745;
+  font-size: 1.3rem;
 }
+
+.validation-error {
+  color: #FF0000;
+  font-size: 0.8em;
+}
+

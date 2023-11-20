@@ -1,0 +1,78 @@
+{
+  "api": {
+    "contact": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "contactMe"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
+    "test": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "personalwebsite2023ed0bbdbb"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "contactMe": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "personalwebsite2023ed0bbdbb": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_contactMe_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "contactMe"
+        }
+      ]
+    },
+    "AMPLIFY_function_contactMe_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "contactMe"
+        }
+      ]
+    },
+    "AMPLIFY_function_personalwebsite2023ed0bbdbb_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "personalwebsite2023ed0bbdbb"
+        }
+      ]
+    },
+    "AMPLIFY_function_personalwebsite2023ed0bbdbb_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "personalwebsite2023ed0bbdbb"
+        }
+      ]
+    }
+  }
+}

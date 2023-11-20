@@ -1,0 +1,31 @@
+// Styles specific to the home-options component
+@import '/src/app/variables';
+$primary-font: 'Press Start 2P', monospace;
+
+
+/* Default styles for desktop */
+.home-options-grid {
+  display: grid;
+  gap: 20px; /* Space between items */
+}
+
+.home-options-item {
+  /* Your existing styles for items */
+}
+
+.home-options-wrapper {
+  cursor: pointer;
+  appearance: none;
+  border: 0;
+  padding: 0;
+  background: none;
+  font-family: inherit;
+  color: inherit;
+  font-size: 90%;
+}
+
+.home-options-text {
+  font-family: $primary-font;
+  font-size: 1em;
+  color: white;
+}
