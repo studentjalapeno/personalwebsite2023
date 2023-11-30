@@ -10,6 +10,8 @@ import { ResumeComponent } from './resume/resume.component';
 import { BlogComponent } from './blog/blog.component';
 import { TipComponent } from './tip/tip.component';
 import { ContactComponent } from './contact/contact.component';
+import { DjComponent} from "./dj/dj.component";
+
 
 export const routes: Routes = [
   { path: 'about', component: AboutComponent },
@@ -20,6 +22,7 @@ export const routes: Routes = [
   { path: 'blog', component: BlogComponent,  data: {view: 'blog'}  },
   { path: 'tip', component: TipComponent },
   { path: 'contact', component: ContactComponent, data: {view: 'contact'} },
+  { path: 'dj', component: DjComponent, data: {view: 'dj'}},
 ];
 
 @NgModule({

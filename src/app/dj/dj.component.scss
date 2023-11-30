@@ -1,0 +1,111 @@
+$primary-bg-color: #e6e2e2;
+$secondary-bg-color: #d4cdcd;
+$border-color: #979797;
+$primary-font: 'Press Start 2P', monospace;/* Basic Reset */
+$contact-button-color: #e06c75;
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+.dj-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #e6e2e2; /* Primary background color */
+}
+
+.dj-header-container {
+  display: flex;
+  width: 100%;
+  justify-content: center; /* Center the header */
+  align-items: center;
+  position: relative; /* Allows absolute positioning within */
+  padding-bottom: 20px;
+}
+
+
+.dj-header {
+  color: #979797;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 2rem; /* Adjust the size as needed */
+  text-align: center; /* Ensure text is centered */
+  flex-grow: 1; /* Allows the header to take up the max width */
+}
+
+.back-button {
+  background-color: #979797; /* Border color for button */
+  color: #d4cdcd; /* Secondary background color for text */
+  border: 2px solid #979797; /* Border color */
+  padding: 5px 10px; /* Smaller padding for a smaller button */
+  font-size: 0.75rem; /* Smaller font size for the button */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-family: 'Press Start 2P', monospace; /* Primary font */
+  margin: 10px auto 10px 2px;
+}
+
+.back-button:hover {
+  background-color: #d4cdcd; /* Lighter shade on hover */
+  color: #979797;
+}
+
+.contact-button {
+  background-color: $contact-button-color; /* Same as the back button for consistency */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px; /* Space from the iframe */
+  cursor: pointer;
+  border-radius: 8px;
+  font-family: 'Press Start 2P', monospace; /* Primary font */
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.contact-button:hover {
+  background-color: darken($contact-button-color, 10%);  /* Lighter shade on hover */
+  color: #979797;
+}
+
+
+
+iframe {
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px; /* Adjust based on preference */
+  margin-top: 20px;
+  border: 2px solid #979797; /* Border color */
+}
+
+.soundcloud-link {
+  font-size: 14px;
+  color: #979797; /* Border color for text */
+  font-family: 'Press Start 2P', monospace; /* Primary font */
+  margin-top: 10px;
+  text-align: center;
+}
+
+.soundcloud-link a {
+  color: #979797; /* Border color for links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.soundcloud-link a:hover {
+  color: #d4cdcd; /* Secondary background color on hover */
+}

@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import {RouterLink, RouterOutlet} from "@angular/router";
 import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import { DjComponent } from './dj/dj.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {HttpClientModule} from "@angular/common/http";
     ResumeComponent,
     BlogComponent,
     TipComponent,
-    ContactComponent
+    ContactComponent,
+    DjComponent
   ],
     imports: [
         BrowserModule,

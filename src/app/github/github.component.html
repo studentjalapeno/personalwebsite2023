@@ -1,10 +1,17 @@
-<div class="home-options-grid">
-  <div class="home-options-row" *ngFor="let row of services">
-    <div *ngFor="let option of row" class="home-options-item home-options-{{ option.id }}">
-      <button id="{{ option.id }}-button" class="home-options-wrapper forums-button" [routerLink]="option.id">
+<div *ngIf="!showDjComponent" class="home-options-grid">
+  <div *ngFor="let row of services" class="home-options-row">
+    <div *ngFor="let option of row" class="home-options-item home-options">
+      <button id="{{ option.id }}-button" class="home-options-wrapper forums-button" (click)="option.id === 'dj' ? toggleDjComponentDisplay() : null">
         <img class="home-options-icon" [src]="option.iconSrc" [alt]="option.iconAlt">
       </button>
       <h3 class="home-options-text home-options-text-forum">{{ option.label }}</h3>
     </div>
   </div>
 </div>
+
+<!-- Conditionally Display DjComponent -->
+<app-dj *ngIf="showDjComponent"
+        (backClicked)="showDjComponent = false"
+        (contactClicked)="navigateToContact()"></app-dj>
+
+
